@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema  = mongoose.Schema(
+const userSchema  = new mongoose.Schema(
     {
         name: {
             type :String,
@@ -16,11 +16,11 @@ const userSchema  = mongoose.Schema(
             trim: true,
             // required: true,
         },
-        pic:{
-            type:String,
-            default: "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
-            // required: true,
-        }
+        // pic:{
+        //     type:String,
+        //     default: "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
+        //     // required: true,
+        // }
     },
     { timestaps: true }
 );
